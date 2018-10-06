@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6ca982ac64d11419cf4b8f7316ba34, type: 3}
+  m_Name: LocalPlayerTurn
+  m_EditorClassIdentifier: 
+  OnStateEnterEvent: {fileID: 11400000, guid: 96de503f92bf19f46b6680d12979ac01, type: 2}
+  OnStateExitEvent: {fileID: 11400000, guid: f785e6ea230cdc843969e6b896049757, type: 2}

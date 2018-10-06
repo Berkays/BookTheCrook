@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1e07fee0756fa4fbb7b0a9d62a6661, type: 3}
+  m_Name: Test Level Information
+  m_EditorClassIdentifier: 
+  LevelName: Test Map
+  ThiefSpawnNode: 0
+  CopSpawnNode: 7
