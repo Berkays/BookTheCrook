@@ -1,4 +1,6 @@
-﻿public class SelectableTouchable : Touchable
+﻿using System.Linq;
+
+public class SelectableTouchable : Touchable
 {
     public GameEvent OnSelectEvent;
     public GameEvent OnDeselectEvent;
@@ -29,11 +31,23 @@
 
     public override void OnClick()
     {
-        base.OnClick();
+        if (false && !AcceptInput)
+            return;
+
+        //Add to current path
+        bool isAdded = CurrentPath.Add(this.InputType);
 
         if (Selected)
+        {
             Selected = false;
+
+            CurrentPath.LastSelectable = null;
+        }
         else
+        {
             Selected = true;
+
+            CurrentPath.LastSelectable = this;
+        }
     }
 }

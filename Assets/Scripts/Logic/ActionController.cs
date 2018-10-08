@@ -14,7 +14,6 @@ public class ActionController : MonoBehaviour
 
     void Start()
     {
-        //Reset action set asset
         this.CurrentActionSet = ScriptableObject.CreateInstance<ActionSet>();
     }
 
@@ -27,24 +26,24 @@ public class ActionController : MonoBehaviour
         }
     }
 
-    public void MovePlayer(int newNode)
+    public void MovePlayer(int nodeId)
     {
         var nodeManager = FindObjectOfType<NodeManager>();
 
-        CurrentPlayer.Value.CurrentNode = newNode;
-        CurrentPlayer.Value.transform.localPosition = nodeManager[newNode].transform.localPosition;
+        CurrentPlayer.Value.CurrentNode = nodeId;
+        CurrentPlayer.Value.transform.localPosition = nodeManager[nodeId].transform.localPosition;
 
-        PlayerAction moveAction = new PlayerAction(ActionType.MOVE,newNode);
+        PlayerAction moveAction = new PlayerAction(ActionType.MOVE,nodeId);
         CurrentActionSet.Add(moveAction);
 
         OnActionChange.Raise();
     }
 
-    public void Interact(int interactionId)
+    public void Interact(int nodeId)
     {
         //var player = CurrentPlayer.Value;
 
-        PlayerAction interactAction = new PlayerAction(ActionType.INTERACT,interactionId);
+        PlayerAction interactAction = new PlayerAction(ActionType.INTERACT,nodeId);
         CurrentActionSet.Add(interactAction);
 
         OnActionChange.Raise();

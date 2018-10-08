@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class Touchable : MonoBehaviour
@@ -11,27 +12,28 @@ public class Touchable : MonoBehaviour
 
     public virtual void OnClick()
     {
-        //if (!AcceptInput)
-        //    return;
+        if (false && !AcceptInput )
+            return;
 
         //Add to current path
         bool isAdded = CurrentPath.Add(this.InputType);
 
         if (isAdded)
         {
-            foreach (var inputAction in InputActions)
+
+            var inputActions = InputActions.Where(n => CurrentPath.Match(n.Path)).ToArray();
+
+            foreach (var inputAction in inputActions)
             {
-                if (CurrentPath.Match(inputAction.Path))
-                    inputAction.Action.Invoke();
+                inputAction.Action.Invoke();
+
+                if (inputAction.Path.ActionPath)
+                {
+                    CurrentPath.LastSelectable.Selected = false;
+
+                    CurrentPath.Clear();
+                }
             }
-
-            //bool clearPath = InputActions.Any(n => n.Path.ClearAfterInvoke == true);
-
-            //if (clearPath)
-            //{
-            //    FindObjectOfType<InputController>().DeselectAllObjects();
-            //    CurrentPath.Clear();
-            //}
 
         }
         else

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path:
   - {fileID: 11400000, guid: 32a11b56c44917a49937d431e6737ec0, type: 2}
-  ClearAfterInvoke: 1
+  ActionPath: 1

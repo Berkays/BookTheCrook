@@ -5,8 +5,6 @@ public class CameraHandler : MonoBehaviour
 {
     public GameEvent OnCameraIntroEnd;
 
-    public PlayerVariable CurrentPlayer;
-
     public CinemachineClearShot clearshotCamera;
 
     public void OnIntroSequenceEnd()
@@ -15,9 +13,9 @@ public class CameraHandler : MonoBehaviour
         OnCameraIntroEnd.Raise();
     }
 
-    public void TrackPlayer()
+    public void TrackPlayer(PlayerVariable Player)
     {
-        var target = CurrentPlayer.Value.transform;
+        var target = Player.Value.transform;
 
         clearshotCamera.LookAt = target;
 

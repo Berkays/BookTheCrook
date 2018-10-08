@@ -7,6 +7,20 @@ public class InputPath : ScriptableObject
     [SerializeField]
     public List<InputGroup> Path;
 
+    public bool ActionPath = true;
+    public SelectableTouchable LastSelectable { get; set; }
+
+    public InputGroup this[int index]
+    {
+        get
+        {
+            if (index < this.Path.Count && index >= 0)
+                return this.Path[index];
+            else
+                return null;
+        }
+    }
+
     public bool Add(InputGroup inputGroup)
     {
         if (this.Path.Count == 0 || this.Path[this.Path.Count - 1] != inputGroup)
@@ -30,17 +44,6 @@ public class InputPath : ScriptableObject
 	{
 		this.Path.Clear();
 	}
-
-    public InputGroup this[int index]
-    {
-        get
-        {
-            if (index < this.Path.Count && index >= 0)
-                return this.Path[index];
-            else
-                return null;
-        }
-    }
 }
 
 public static class InputPathExtension

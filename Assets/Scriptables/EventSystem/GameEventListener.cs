@@ -17,13 +17,14 @@ public class GameEventListener : MonoBehaviour
 
     private void OnEnable()
     {
-        if(this.Event != null)
-        Event.RegisterListener(this);
+        if (this.Event != null)
+            Event.RegisterListener(this);
     }
 
     private void OnDisable()
     {
-        Event.UnregisterListener(this);
+        if (this.Event != null)
+            Event.UnregisterListener(this);
     }
 
     public void OnEventRaised()
