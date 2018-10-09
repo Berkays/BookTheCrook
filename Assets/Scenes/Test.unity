@@ -10043,8 +10043,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 126378521}
-  m_LocalRotation: {x: 0.340265, y: -0.23483431, z: 0.08817153, w: 0.9062552}
-  m_LocalPosition: {x: 2.5, y: 4, z: -4.5}
+  m_LocalRotation: {x: 0.16799636, y: -0.826208, z: 0.32266322, w: 0.43016976}
+  m_LocalPosition: {x: 4, y: 4, z: 2.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 944387378}
@@ -10337,7 +10337,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1152
+  m_Name: pb_Mesh-1106
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -11331,7 +11331,7 @@ Prefab:
         type: 2}
       propertyPath: ExitMovementNode
       value: 
-      objectReference: {fileID: 775958317}
+      objectReference: {fileID: 1827477404}
     - target: {fileID: 114499954958378642, guid: 36dd514d2dd3b3741885e9a099731686,
         type: 2}
       propertyPath: CurrentPath
@@ -11400,7 +11400,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-1284
+  m_Name: pb_Mesh-1238
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -16395,7 +16395,7 @@ Prefab:
         type: 2}
       propertyPath: ExitMovementNode
       value: 
-      objectReference: {fileID: 641544894}
+      objectReference: {fileID: 994110518}
     - target: {fileID: 114499954958378642, guid: 36dd514d2dd3b3741885e9a099731686,
         type: 2}
       propertyPath: CurrentPath
@@ -18220,7 +18220,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1890711226}
-  m_LocalRotation: {x: 0.340265, y: -0.23483431, z: 0.08817153, w: 0.9062552}
+  m_LocalRotation: {x: 0.34026498, y: -0.23483427, z: 0.088171504, w: 0.9062552}
   m_LocalPosition: {x: 2.5, y: 4, z: -4.5}
   m_LocalScale: {x: 1, y: 1.0000002, z: 1.0000002}
   m_Children:
@@ -18424,7 +18424,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2012107385}
-  m_LocalRotation: {x: 0.30709985, y: 0.31298718, z: -0.10772481, w: 0.8922579}
+  m_LocalRotation: {x: 0.30709982, y: 0.31298715, z: -0.10772479, w: 0.8922579}
   m_LocalPosition: {x: -3.6, y: 4, z: -4.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

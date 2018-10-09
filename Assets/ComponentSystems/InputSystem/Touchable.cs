@@ -12,7 +12,7 @@ public class Touchable : MonoBehaviour
 
     public virtual void OnClick()
     {
-        if (false && !AcceptInput )
+        if (false && !AcceptInput)
             return;
 
         //Add to current path
@@ -26,19 +26,20 @@ public class Touchable : MonoBehaviour
             foreach (var inputAction in inputActions)
             {
                 inputAction.Action.Invoke();
+            }
 
-                if (inputAction.Path.ActionPath)
-                {
+            if (inputActions.Length > 0)
+            {
+                if (CurrentPath.LastSelectable != null)
                     CurrentPath.LastSelectable.Selected = false;
 
-                    CurrentPath.Clear();
-                }
+                CurrentPath.Clear();
             }
 
         }
         else
         {
-            //Deselect
+            //Remove same element
             CurrentPath.RemoveLast();
         }
 
