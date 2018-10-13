@@ -406,6 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LinePrefab: {fileID: 1975366141934174, guid: 59886258456517a4d923998a9386a9dd, type: 2}
   LineContainer: {fileID: 0}
+  verticalLinePosition: -0.45
 --- !u!114 &114595925707922624
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -11,6 +11,7 @@ public class ActionLineDrawer : MonoBehaviour
 
     private Player player;
 
+    //public float verticalLinePosition = 0.1f;
     private const int POOL_SIZE = 8;
     private GameObject[] actionLines = null;
 
@@ -34,7 +35,7 @@ public class ActionLineDrawer : MonoBehaviour
         //var interactionNodes = nodeManager.GetNodes<InteractionNode>(Player.Value.CurrentNode);
 
 
-
+        Vector3 originPos = this.transform.position;
 
         int i;
         for (i = 0; i < movementNodes.Count; i++)
@@ -45,7 +46,7 @@ public class ActionLineDrawer : MonoBehaviour
             obj.transform.localPosition = Vector3.zero;
 
             Vector3 actionPosition = node.transform.localPosition;
-            Vector3 lineOrigin = Vector3.Lerp(this.transform.position, actionPosition, 0.1f);
+            Vector3 lineOrigin = Vector3.Lerp(originPos, actionPosition, 0.1f);
 
             var lineRenderer = obj.GetComponent<LineRenderer>();
             lineRenderer.SetPosition(0, lineOrigin);

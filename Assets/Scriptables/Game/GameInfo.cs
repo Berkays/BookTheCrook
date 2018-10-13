@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Game Information", menuName = "Custom Assets/Game/Game Information", order = 1)]
 public class GameInfo : ScriptableObject
 {
     private static GameInfo _instance;
@@ -23,12 +22,13 @@ public class GameInfo : ScriptableObject
     public int GameId;
     public LevelInfo LevelInfo;
 
-    public PlayerInfo CopInfo, ThiefInfo;
+    public PlayerInfo PlayerOne;
+    public PlayerInfo PlayerTwo;
 
     public int CurrentTurn = 0;
     public int TurnCount = 0;
 
-    public bool isGameEnd()
+    public bool IsGameOver()
     {
         return false;
     }

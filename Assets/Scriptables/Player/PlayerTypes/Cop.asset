@@ -8,6 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77e4b15c6bef8af4bbed64ea623caf84, type: 3}
-  m_Name: OnCameraIntroEnd
+  m_Script: {fileID: 11500000, guid: d319ca64936cbff428a05f126620140a, type: 3}
+  m_Name: Cop
   m_EditorClassIdentifier: 
+  Name: Cop
+  UIColor: {r: 0, g: 0.51233464, b: 0.7830189, a: 1}

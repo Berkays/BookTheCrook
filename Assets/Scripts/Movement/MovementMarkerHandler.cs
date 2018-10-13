@@ -40,10 +40,25 @@ public class MovementMarkerHandler : MonoBehaviour
 
             //Set marker position
             Vector3 nodePos = connectedNodes[i].transform.localPosition;
-            Vector3 pos = new Vector3(nodePos.x, MARKER_Y, nodePos.z);
-            obj.transform.localPosition = pos;
+            Vector3 pos = getFloorPosition(nodePos);
+                        obj.transform.localPosition = pos;
 
             obj.SetActive(true);
+        }
+    }
+
+    private Vector3 getFloorPosition(Vector3 nodePosition)
+    {
+        RaycastHit rayHit;
+        if (Physics.Raycast(nodePosition, Vector3.down, out rayHit))
+        {
+            Vector3 hitPosition = rayHit.point;
+            hitPosition.y += 0.01f;
+            return hitPosition;
+        }
+        else
+        {
+            return new Vector3(nodePosition.x,MARKER_Y,nodePosition.z);
         }
     }
 
@@ -59,7 +74,7 @@ public class MovementMarkerHandler : MonoBehaviour
 
         for (int i = 0; i < POOL_SIZE; i++)
         {
-            var obj = GameObject.Instantiate(MovementMarkerPrefab, Vector3.zero, Quaternion.Euler(-90, 0, 0),MarkerContainer);
+            var obj = GameObject.Instantiate(MovementMarkerPrefab, Vector3.zero, Quaternion.Euler(-90, 0, 0), MarkerContainer);
             obj.SetActive(false);
 
             movementMarkers[i] = obj;

@@ -3,15 +3,7 @@ using Cinemachine;
 
 public class CameraHandler : MonoBehaviour
 {
-    public GameEvent OnCameraIntroEnd;
-
     public CinemachineClearShot clearshotCamera;
-
-    public void OnIntroSequenceEnd()
-    {
-        Debug.Log("Camera:Intro Sequence End");
-        OnCameraIntroEnd.Raise();
-    }
 
     public void TrackPlayer(PlayerVariable Player)
     {

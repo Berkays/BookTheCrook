@@ -14,3 +14,5 @@ MonoBehaviour:
   StateEvents:
   - {fileID: 11400000, guid: 6c0f87c425ebe5b4e99526560f9c34e7, type: 2}
   - {fileID: 11400000, guid: 4264c5708d0d8b94282f5184c65646b0, type: 2}
+  - {fileID: 11400000, guid: 8b06ea507d24a9448bcee28115bbe697, type: 2}
+  - {fileID: 11400000, guid: 65bbc73c51bca2947928c526317e8697, type: 2}
