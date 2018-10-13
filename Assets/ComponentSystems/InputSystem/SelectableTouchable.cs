@@ -31,11 +31,12 @@ public class SelectableTouchable : Touchable
 
     public override void OnClick()
     {
-        if (false && !AcceptInput)
-            return;
-
-        //Add to current path
+        //base.OnClick();
         bool isAdded = CurrentPath.Add(this.InputType);
+
+        if (!isAdded)
+            CurrentPath.RemoveLast();
+
 
         if (Selected)
         {

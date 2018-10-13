@@ -72,7 +72,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54874b8b2b1b2943a2e92abf7b7716e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionAsset: {fileID: 0}
+  InteractionAsset: {fileID: 11400000, guid: 427571400fa325941b124ae0a9c9e840, type: 2}
   Cooldown: 0
   ExitVent: {fileID: 0}
   ExitMovementNode: {fileID: 0}
